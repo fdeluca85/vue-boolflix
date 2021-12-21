@@ -9,6 +9,9 @@
 import MovieCard from "../commons/MovieCard.vue"
 export default {
     name: 'MoviesList',
+    props:{
+        movies: Array
+    },
     components:{
         MovieCard
     }
