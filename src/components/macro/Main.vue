@@ -1,10 +1,16 @@
 <template>
-    <main></main>
+    <main>
+        <MoviesList />
+    </main>
 </template>
 
 <script>
+import MoviesList from "../sections/MoviesList.vue"
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        MoviesList
+    }
 }
 </script>
 
