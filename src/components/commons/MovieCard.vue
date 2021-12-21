@@ -23,6 +23,8 @@ export default {
                     return '\uD83C\uDDEE\uD83C\uDDF9'
                 } else if (this.info.original_language == 'us') {
                     return '\uD83C\uDDFA\uD83C\uDDF8'
+                } else if (this.info.original_language == 'en') {
+                    return '\ud83c\uddec\ud83c\udde7'
                 } else if (this.info.original_language == 'fr') {
                     return '\uD83C\uDDE8\uD83C\uDDF5'
                 } else if (this.info.original_language == 'es') {
