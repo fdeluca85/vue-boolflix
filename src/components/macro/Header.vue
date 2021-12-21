@@ -1,6 +1,6 @@
 <template>
     <header>
-        <SearchBar/>
+        <SearchBar @ricerca="passValue" />
     </header>
 </template>
 
@@ -10,6 +10,12 @@ export default {
     name: 'Header',
     components: {
         SearchBar
+    },
+    methods: {
+        passValue(valore){
+            this.$emit('ricerca', valore)
+
+        }
     }
 }
 </script>

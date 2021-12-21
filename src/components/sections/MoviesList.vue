@@ -1,7 +1,12 @@
-<template>
+
+    <template>
     <div class="container">
-        <MovieCard />        
+        <div class="card" v-for="(movie, index) in movies" :key="index">
+            <MovieCard :info='movie'/>
+        </div>
+             
     </div>
+  
   
 </template>
 
