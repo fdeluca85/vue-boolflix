@@ -1,12 +1,15 @@
 <template>
     <div class="serie_card">
         <ul>
-            <li>{{info.name}}</li>
-            <li>{{info.original_name}}</li>
+            <li><img :src="'https://image.tmdb.org/t/p/w342/' + info.poster_path"
+                :alt="info.name"></li>
+            <li><span>Titolo: </span> {{info.name}}</li>
+            <li><span>Titolo originale: </span> {{info.original_name}}</li>
+            <li>Lingua originale: {{lingua()}}</li>
             <li><span>Voti: </span>
                 <div class="star" v-for="index in starVote(info.vote_average)" :key="index"><i class="fas fa-star"></i></div>
             </li>
-            <li>Lingua originale: {{lingua()}}</li>
+            
             
 
         </ul>

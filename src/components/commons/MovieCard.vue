@@ -1,12 +1,14 @@
 <template>
     <div class="movie_card">
         <ul>
-            <li>{{info.title}}</li>
-            <li>{{info.original_title}}</li>
+            <li><img :src="'https://image.tmdb.org/t/p/w342/' + info.poster_path"
+                :alt="info.title"></li>
+            <li><span>Titolo: </span> {{info.title}}</li>
+            <li><span>Titolo originale: </span> {{info.original_title}}</li>
+            <li>Lingua originale: {{lingua()}}</li>
             <li><span>Voti: </span>
                 <div class="star" v-for="index in starVote(info.vote_average)" :key="index"><i class="fas fa-star"></i></div>
             </li>
-            <li>Lingua originale: {{lingua()}}</li>
         </ul>
         
     </div>
