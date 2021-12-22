@@ -10,7 +10,7 @@
             <h3>Lingua originale: {{lingua()}}</h3> 
             <div class="star">
                 <i v-for="index in starVote(info.vote_average)" :key="index" class="fas fa-star"></i>
-                <i v-for="index in (5 - starVote(info.vote_average))" :key="index" class="far fa-star"></i>
+                <i v-for="i in (5 - starVote(info.vote_average))" :key="'vuote'+i" class="far fa-star"></i>
             </div>
         </div>      
     </div>
@@ -41,8 +41,8 @@ export default {
                     return this.info.original_language
                 }
         },
-        starVote (voto){
-                return voto = Math.ceil(voto / 2)
+        starVote (vote){
+                return vote = Math.ceil(vote / 2)
                 
             },
         mostraTitolo (){
@@ -64,12 +64,19 @@ export default {
 }
 .card{
     padding: 10px;
+    position: relative;  
 
 }
 .poster:hover{
-    filter: brightness(0);
+    filter: brightness(0.5);
 }
 .info{
     // display: none;
+    position: absolute;
+    top: 10px;
+        :hover{
+        display: block;
+    
+        }
 }
 </style>
