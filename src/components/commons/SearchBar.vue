@@ -2,7 +2,7 @@
     <section>
         <div class="search-bar">
             <input type="text" placeholder="Titolo..." v-model="searchMovie">
-            <button @click="$emit ('ricerca', searchMovie)">cerca</button>
+            <button @click="cercaResetta()">cerca</button>
         </div>
     </section>
 </template>
@@ -16,7 +16,12 @@ export default {
                 searchMovie: ''
             }
         },
-        
+        methods: {
+            cercaResetta() {
+                this.$emit ('ricerca', this.searchMovie,);
+                this.searchMovie = "";                
+            }
+} 
     }
  
 </script>
