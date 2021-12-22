@@ -66,19 +66,19 @@ export default {
 .card{
     padding: 10px;
     position: relative;  
+    :hover .info{
+        opacity: 1;
+    }
 
 }
 .poster:hover{
-    filter: brightness(0.5);
+    filter: brightness(0.3);
 }
 .info{
-    // display: none;
     position: absolute;
     bottom: 50px;
-    left:20px;
-        :hover{
-        display: block;
-    
-        }
+    left:20px;     
+    transition: .5s ease;
+    opacity:0;  
 }
 </style>
