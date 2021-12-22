@@ -1,5 +1,6 @@
 <template>
     <header>
+        <img src="../../assets/img/logo.png" alt="boolflix logo">
         <SearchBar @ricerca="passValue" />
     </header>
 </template>
@@ -21,5 +22,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+header{
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 80px;
+}
 
 </style>
