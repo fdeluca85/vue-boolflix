@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="search-bar">
-            <input type="text" placeholder="ricerca..." v-model="searchMovie">
+            <input type="text" placeholder="Titolo..." v-model="searchMovie">
             <button @click="$emit ('ricerca', searchMovie)">cerca</button>
         </div>
     </section>

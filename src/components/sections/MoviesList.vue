@@ -1,6 +1,7 @@
 
     <template>
     <div class="container">
+        <h2>Film</h2>
         <div class="card" v-for="(movie, index) in movies" :key="index">
             <MovieCard :info='movie'/>
         </div>
