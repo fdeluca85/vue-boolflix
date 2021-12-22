@@ -1,7 +1,8 @@
 <template>
     <div class="card">
         <div class="poster">
-            <img :src="'https://image.tmdb.org/t/p/w342/' + info.poster_path"
+            <img v-if="info.poster_path == null" src="../../assets/img/notfound.png" alt="">
+            <img v-else :src="'https://image.tmdb.org/t/p/w342/' + info.poster_path"
                 :alt="info.title"> 
         </div> 
         <div class="info">
@@ -73,7 +74,8 @@ export default {
 .info{
     // display: none;
     position: absolute;
-    top: 10px;
+    bottom: 50px;
+    left:20px;
         :hover{
         display: block;
     
