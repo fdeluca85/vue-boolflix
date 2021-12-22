@@ -22,4 +22,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+button{
+    padding: 10px 15px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+input{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+
 </style>

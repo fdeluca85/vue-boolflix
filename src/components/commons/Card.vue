@@ -58,10 +58,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+img{
+    border-radius: 20px;
+}
 .star{
     display: inline;
     color: gold;
+    padding: 5px 10px;
 }
 .card{
     padding: 10px;

@@ -15,7 +15,6 @@ export default {
     methods: {
         passValue(valore){
             this.$emit('ricerca', valore)
-
         }
     }
 }
@@ -28,6 +27,7 @@ header{
     display: flex;
     justify-content: space-between;
     line-height: 80px;
-}
+    padding: 5px;
+    }
 
 </style>
