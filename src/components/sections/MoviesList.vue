@@ -1,14 +1,12 @@
-
-    <template>
-    <div class="container">
+<template>
+    <section>
         <h2>Film</h2>
-        <div class="card" v-for="(movie, index) in movies" :key="index">
-            <Card :info='movie'/>
+        <div class="container">        
+            <div class="card" v-for="(movie, index) in movies" :key="index">
+                <Card :info='movie'/>
+            </div>             
         </div>
-             
-    </div>
-  
-  
+    </section>
 </template>
 
 <script>

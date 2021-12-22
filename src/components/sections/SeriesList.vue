@@ -1,14 +1,12 @@
-
-    <template>
-    <div class="container">
-        <h2>Serie TV</h2>
-        <div class="card" v-for="(serie, index) in series" :key="index">
-            <Card :info='serie'/>
-        </div>
-             
-    </div>
-  
-  
+<template>
+        <section>
+            <h2>Serie TV</h2>
+            <div class="container">
+                <div class="card" v-for="(serie, index) in series" :key="index">
+                    <Card :info='serie'/>
+                </div>             
+            </div>
+        </section> 
 </template>
 
 <script>

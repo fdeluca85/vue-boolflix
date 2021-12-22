@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="poster">
-            <img v-if="info.poster_path == null" src="../../assets/img/notfound.png" alt="">
+            <img v-if="info.poster_path == null" src="../../assets/img/notfound.png" alt="poster non disponibile">
             <img v-else :src="'https://image.tmdb.org/t/p/w342/' + info.poster_path"
                 :alt="info.title"> 
         </div> 
