@@ -1,15 +1,11 @@
 <template>
     <div class="movie_card">
-        <ul>
-            <li><img :src="'https://image.tmdb.org/t/p/w342/' + info.poster_path"
-                :alt="info.title"></li>
-            <li><span>Titolo: </span> {{info.title}}</li>
-            <li><span>Titolo originale: </span> {{info.original_title}}</li>
-            <li>Lingua originale: {{lingua()}}</li>
-            <li><span>Voti: </span>
-                <div class="star" v-for="index in starVote(info.vote_average)" :key="index"><i class="fas fa-star"></i></div>
-            </li>
-        </ul>
+        <img :src="'https://image.tmdb.org/t/p/w342/' + info.poster_path"
+                :alt="info.title">
+            <h2>{{info.title ? info.title :info.name}}</h2>
+            <h2>{{info.original_title ? info.original_title :info.original_name }}</h2>
+            <h3>Lingua originale: {{lingua()}}</h3> 
+            <div class="star" v-for="index in starVote(info.vote_average)" :key="index"><i class="fas fa-star"></i></div>
         
     </div>
   
@@ -17,7 +13,7 @@
 
 <script>
 export default {
-    name: 'MovieCard',
+    name: 'Card',
     props: {
         info: Object
     },
@@ -47,6 +43,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.star{
+    display: inline;
+}
 
 </style>
